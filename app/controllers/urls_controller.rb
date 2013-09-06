@@ -10,7 +10,7 @@ class UrlsController < ApplicationController
   # GET /urls/1
   # GET /urls/1.json
   def show
-    @url = Url.find(params[unshorten])
+    @url = Url.find(params[:id])
   end
 
   # GET /urls/new
@@ -62,14 +62,4 @@ class UrlsController < ApplicationController
     end
   end
 
-  # private
-  #   # Use callbacks to share common setup or constraints between actions.
-  #   def set_url
-  #     @url = Url.find(params[:id])
-  #   end
-
-  #   # Never trust parameters from the scary internet, only allow the white list through.
-  #   def url_params
-  #     params.require(:url).permit(:shorturl, :longurl)
-  #   end
 end
