@@ -10,7 +10,8 @@ class UrlsController < ApplicationController
   # GET /urls/1
   # GET /urls/1.json
   def show
-    @url = Url.find(params[:id])
+    # @url = Url.find(params[:id])
+    @url = Url.where(:shorturl => params[:id]).first
   end
 
   # GET /urls/new
