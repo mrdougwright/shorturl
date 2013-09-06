@@ -10,7 +10,7 @@ class UrlsController < ApplicationController
   # GET /urls/1
   # GET /urls/1.json
   def show
-    redirect_to urls_path
+    @url = Url.find(params[unshorten])
   end
 
   # GET /urls/new
