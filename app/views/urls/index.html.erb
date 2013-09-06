@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Shorturl</th>
-      <th>Longurl</th>
+      <th>Long URL</th>
+      <th>Short URL</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,11 +14,8 @@
   <tbody>
     <% @urls.each do |url| %>
       <tr>
-        <td><%= url.shorturl %></td>
         <td><%= url.longurl %></td>
-        <td><%= link_to 'Show', url %></td>
-        <td><%= link_to 'Edit', edit_url_path(url) %></td>
-        <td><%= link_to 'Destroy', url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= url.shorturl %></td>
       </tr>
     <% end %>
   </tbody>
